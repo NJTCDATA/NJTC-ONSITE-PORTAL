@@ -213,6 +213,104 @@ const platformGuides = {
                 </ul>
             </div>
         `
+    },
+    
+    knowtion: {
+        title: "Knowtion Guide - Your Community Platform",
+        content: `
+            <div class="guide-section">
+                <h3>🎯 What is Knowtion?</h3>
+                <p>Your community hub for celebrating wins, sharing concerns, and documenting your tutoring journey. This is YOUR space to connect, reflect, and grow together as a team.</p>
+            </div>
+            
+            <div class="guide-section">
+                <h3>🌟 Core Features</h3>
+                <ol>
+                    <li><strong>Team Shoutouts:</strong> Celebrate teammates who went above and beyond</li>
+                    <li><strong>Think Tanks:</strong> Raise concerns, ask questions, brainstorm solutions together</li>
+                    <li><strong>Scholar Growth Artifacts:</strong> Document student progress and celebrate wins</li>
+                    <li><strong>Daily Reflections:</strong> Share your tutoring journey and experiences</li>
+                </ol>
+            </div>
+            
+            <div class="guide-section">
+                <h3>✨ How to Use Knowtion</h3>
+                <ul>
+                    <li><strong>Shoutout a Teammate:</strong> Recognize great work! "Shoutout to J.M. for amazing engagement strategies today!"</li>
+                    <li><strong>Raise a Think Tank:</strong> Share challenges. "How do you handle off-task behavior with multiple students?"</li>
+                    <li><strong>Post Scholar Growth:</strong> Celebrate student wins! "A.R. (3rd grade, Site A) mastered double-digit addition today! 🎉"</li>
+                    <li><strong>Share Your Day:</strong> Reflect on your session. "Today was challenging but rewarding. Students were engaged!"</li>
+                </ul>
+            </div>
+            
+            <div class="guide-section guide-highlight">
+                <h3>⚠️ CRITICAL: Privacy & Confidentiality</h3>
+                <p><strong>ALWAYS use initials only, never full names!</strong></p>
+                <p><strong>Format:</strong> "A.R. (Grade 3, Site Name)" or "J.M. (Coach)"</p>
+                <p><strong>Never share:</strong> Full student names, personal information, or identifying details</p>
+                <p><strong>Keep it positive:</strong> Focus on growth, strategies, and celebrations</p>
+            </div>
+            
+            <div class="guide-section">
+                <h3>📝 Best Practices</h3>
+                <ul>
+                    <li><strong>Post Daily:</strong> Share at least one reflection, win, or question each day</li>
+                    <li><strong>Be Specific:</strong> "Student showed 20% growth in fluency" vs "Student did well"</li>
+                    <li><strong>Celebrate Often:</strong> Recognize teammates and student progress frequently</li>
+                    <li><strong>Ask Questions:</strong> Use think tanks to learn from experienced tutors</li>
+                    <li><strong>Share Strategies:</strong> What worked for you today? Help others succeed!</li>
+                    <li><strong>Stay Professional:</strong> Keep posts constructive, supportive, and appropriate</li>
+                </ul>
+            </div>
+            
+            <div class="guide-section">
+                <h3>🎯 Sample Posts</h3>
+                <div class="sample-posts">
+                    <div class="sample-post">
+                        <strong>Team Shoutout:</strong>
+                        <p>"Huge shoutout to K.W. (Site Lead) for setting up the perfect tutoring space today! Materials organized, students ready to learn. You're amazing! 🌟"</p>
+                    </div>
+                    <div class="sample-post">
+                        <strong>Think Tank:</strong>
+                        <p>"Question for experienced tutors: How do you differentiate when you have a red band and green band student in the same small group? Looking for strategies!"</p>
+                    </div>
+                    <div class="sample-post">
+                        <strong>Scholar Growth:</strong>
+                        <p>"M.J. (4th grade, Washington Elementary) finally mastered fractions today! After 3 weeks of work, she got 9/10 on the exit ticket. So proud! 🎉📊"</p>
+                    </div>
+                    <div class="sample-post">
+                        <strong>Daily Reflection:</strong>
+                        <p>"Today's session was powerful. Used games to teach multiplication - engagement was 100%! Students were begging to stay longer. This is why we do this work. 💪"</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="guide-section">
+                <h3>🚨 When to Use Knowtion</h3>
+                <ul>
+                    <li><strong>After a great session:</strong> Share what worked!</li>
+                    <li><strong>When you're stuck:</strong> Ask the community for help</li>
+                    <li><strong>Student breakthrough:</strong> Celebrate growth immediately</li>
+                    <li><strong>Need encouragement:</strong> Tough day? The team has your back</li>
+                    <li><strong>See great work:</strong> Shoutout teammates doing amazing things</li>
+                    <li><strong>End of day reflection:</strong> Process your tutoring journey</li>
+                </ul>
+            </div>
+            
+            <div class="guide-section guide-highlight">
+                <h3>💙 Building Community</h3>
+                <p>Knowtion is more than a platform—it's YOUR community. When you share wins, ask questions, and support teammates, you make NJTC stronger.</p>
+                <p><strong>Your voice matters.</strong> Your experiences help others. Your reflections improve the program.</p>
+                <p><strong>Express your day. Document your journey. Celebrate together.</strong></p>
+            </div>
+            
+            <div class="guide-section">
+                <h3>📞 Need Help?</h3>
+                <p><strong>Technical issues:</strong> Contact your onsite leader</p>
+                <p><strong>Content questions:</strong> Ask in a think tank post!</p>
+                <p><strong>Privacy concerns:</strong> Speak with Program Manager immediately</p>
+            </div>
+        `
     }
 };
 
@@ -229,7 +327,8 @@ const roleContent = {
                     "Log attendance in PEARL immediately after session",
                     "Complete exit survey before leaving",
                     "Check Ask Connor for any questions or challenges",
-                    "Track student progress in Progress Monitoring"
+                    "Track student progress in Progress Monitoring",
+                    "Share your wins on Knowtion!"
                 ]
             },
             {
@@ -268,7 +367,8 @@ const roleContent = {
                     "Conduct weekly data reviews with team",
                     "Model high-impact tutoring sessions",
                     "Provide real-time coaching and feedback",
-                    "Monitor program quality and fidelity"
+                    "Monitor program quality and fidelity",
+                    "Foster community through Knowtion engagement"
                 ]
             },
             {
@@ -279,7 +379,8 @@ const roleContent = {
                     "Check tutor attendance logging in PEARL",
                     "Identify tutors needing additional support",
                     "Share best practices and celebrate wins",
-                    "Communicate trends to Program Manager"
+                    "Communicate trends to Program Manager",
+                    "Amplify tutor voices on Knowtion"
                 ]
             },
             {
@@ -307,7 +408,8 @@ const roleContent = {
                     "First point of contact for all onsite issues",
                     "Data integrity and accuracy (PEARL, i-Ready)",
                     "Team coordination and communication",
-                    "Escalation pathway to Program Manager"
+                    "Escalation pathway to Program Manager",
+                    "Community building through Knowtion"
                 ]
             },
             {
@@ -318,7 +420,8 @@ const roleContent = {
                     "Verify session schedules and coverage",
                     "Address immediate behavior or technical issues",
                     "Monitor materials and resource availability",
-                    "Communicate urgent issues to Program Manager"
+                    "Communicate urgent issues to Program Manager",
+                    "Encourage daily Knowtion engagement"
                 ]
             },
             {
@@ -361,6 +464,50 @@ function init() {
     if (savedRole) {
         selectRole(savedRole);
     }
+    
+    // Add sample posts styling
+    const samplePostsStyle = document.createElement('style');
+    samplePostsStyle.textContent = `
+    .sample-posts {
+        display: grid;
+        gap: 1.25rem;
+        margin-top: 1rem;
+    }
+    
+    .sample-post {
+        background: linear-gradient(135deg, rgba(232, 62, 140, 0.08), rgba(253, 126, 20, 0.05));
+        border-left: 4px solid #e83e8c;
+        border-radius: 12px;
+        padding: 1.25rem;
+        transition: all 0.3s ease;
+    }
+    
+    .sample-post:hover {
+        transform: translateX(8px);
+        box-shadow: 0 4px 16px rgba(232, 62, 140, 0.15);
+    }
+    
+    .sample-post strong {
+        display: block;
+        font-family: var(--font-display);
+        font-size: 0.875rem;
+        font-weight: 700;
+        color: #e83e8c;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        margin-bottom: 0.5rem;
+    }
+    
+    .sample-post p {
+        font-family: var(--font-body);
+        font-size: 1rem;
+        line-height: 1.7;
+        color: var(--gray-800);
+        margin: 0;
+        font-style: italic;
+    }
+    `;
+    document.head.appendChild(samplePostsStyle);
 }
 
 function loadDailyQuote() {
