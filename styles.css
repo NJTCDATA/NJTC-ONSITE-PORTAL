@@ -553,6 +553,14 @@ body {
     background: linear-gradient(135deg, #28a745, #20c997);
 }
 
+.card-knowtion {
+    border-color: #e83e8c;
+}
+
+.card-knowtion .card-glow {
+    background: linear-gradient(135deg, #e83e8c, #fd7e14);
+}
+
 .stat-dosage .stat-icon {
     background: linear-gradient(135deg, #17a2b8, #20c997);
 }
