@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NJTC Portal | New Jersey Tutoring Corps</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600;700;800;900&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <!-- ANIMATED HERO SECTION -->
+    <div class="hero-section">
+        <div class="hero-background">
+            <div class="animated-circles">
+                <div class="circle circle-1"></div>
+                <div class="circle circle-2"></div>
+                <div class="circle circle-3"></div>
+                <div class="circle circle-4"></div>
+            </div>
+        </div>
+        
+        <div class="hero-content">
+            <div class="hero-brand">
+                <div class="brand-logo-large">
+                    <div class="logo-glow"></div>
+                    <div class="logo-content">NJTC</div>
+                </div>
+                <h1 class="hero-title">New Jersey Tutoring Corps</h1>
+                <p class="hero-subtitle">High-Impact Tutoring Portal</p>
+            </div>
+            
+            <!-- DAILY INSPIRATION -->
+            <div class="inspiration-card">
+                <div class="inspiration-icon">✨</div>
+                <p class="inspiration-quote" id="dailyQuote">Loading inspiration...</p>
+                <div class="inspiration-author" id="quoteAuthor"></div>
+            </div>
+            
+            <!-- ROLE SELECTOR -->
+            <div class="role-selector-card">
+                <h2>Welcome! Select Your Role</h2>
+                <div class="role-buttons">
+                    <button class="role-btn" data-role="tutor" onclick="selectRole('tutor')">
+                        <div class="role-icon">📚</div>
+                        <div class="role-name">Tutor</div>
+                    </button>
+                    <button class="role-btn" data-role="coach" onclick="selectRole('coach')">
+                        <div class="role-icon">🎯</div>
+                        <div class="role-name">Coach</div>
+                    </button>
+                    <button class="role-btn" data-role="site-lead" onclick="selectRole('site-lead')">
+                        <div class="role-icon">⭐</div>
+                        <div class="role-name">Site Lead</div>
+                    </button>
+                    <button class="role-btn" data-role="all" onclick="selectRole('all')">
+                        <div class="role-icon">🚀</div>
+                        <div class="role-name">View All</div>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- MAIN DASHBOARD -->
+    <main class="dashboard" id="dashboard" style="display:none;">
+        
+        <!-- STICKY HEADER -->
+        <header class="dashboard-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="header-brand">
+                        <div class="brand-logo-small">NJTC</div>
+                        <div class="header-text">
+                            <h1>NJTC Portal</h1>
+                            <p id="userRoleDisplay"></p>
+                        </div>
+                    </div>
+                    <div class="header-actions">
+                        <div class="current-time" id="currentTime"></div>
+                        <button class="change-role-btn" onclick="changeRole()">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+                                <circle cx="9" cy="7" r="4"/>
+                                <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                            </svg>
+                            Change Role
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        <div class="container">
+            
+            <!-- QUICK STATS -->
+            <section class="quick-stats">
+                <div class="stat-card stat-attendance">
+                    <div class="stat-icon">📅</div>
+                    <div class="stat-content">
+                        <div class="stat-label">Attendance Goal</div>
+                        <div class="stat-value">≥90%</div>
+                    </div>
+                </div>
+                <div class="stat-card stat-dosage">
+                    <div class="stat-icon">⏱️</div>
+                    <div class="stat-content">
+                        <div class="stat-label">Session Length</div>
+                        <div class="stat-value">30-45 min</div>
+                    </div>
+                </div>
+                <div class="stat-card stat-ratio">
+                    <div class="stat-icon">👥</div>
+                    <div class="stat-content">
+                        <div class="stat-label">Tutor:Student</div>
+                        <div class="stat-value">1:3 Max</div>
+                    </div>
+                </div>
+                <div class="stat-card stat-progress">
+                    <div class="stat-icon">📊</div>
+                    <div class="stat-content">
+                        <div class="stat-label">Data-Driven</div>
+                        <div class="stat-value">Weekly</div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- PLATFORM CARDS -->
+            <section class="platforms-section">
+                <h2 class="section-title">Your Platforms</h2>
+                
+                <div class="platforms-grid">
+                    
+                    <!-- ASK CONNOR -->
+                    <div class="platform-card card-connor" data-platform="connor">
+                        <div class="card-glow"></div>
+                        <div class="card-header">
+                            <div class="card-icon">💬</div>
+                            <h3>Ask Connor</h3>
+                            <div class="card-badge">Knowledge Base</div>
+                        </div>
+                        <p class="card-description">Your 24/7 tutoring assistant. Get instant answers to program questions, best practices, and support resources.</p>
+                        <div class="card-features">
+                            <span class="feature">✓ Instant Answers</span>
+                            <span class="feature">✓ Best Practices</span>
+                            <span class="feature">✓ Request Support</span>
+                        </div>
+                        <button class="card-btn" onclick="openPlatform('https://njtcdata.github.io/Ask-Connor/welcome.html')">
+                            Open Ask Connor
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </button>
+                        <button class="info-btn" onclick="openGuide('connor')">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+                                <line x1="12" y1="17" x2="12.01" y2="17"/>
+                            </svg>
+                        </button>
+                    </div>
+                    
+                    <!-- PROGRESS MONITORING -->
+                    <div class="platform-card card-progress" data-platform="progress">
+                        <div class="card-glow"></div>
+                        <div class="card-header">
+                            <div class="card-icon">📊</div>
+                            <h3>Progress Monitoring</h3>
+                            <div class="card-badge">Data Tracker</div>
+                        </div>
+                        <p class="card-description">Track student growth, monitor attendance, and visualize impact. Data-driven insights for high-impact tutoring.</p>
+                        <div class="card-features">
+                            <span class="feature">✓ Student Progress</span>
+                            <span class="feature">✓ Attendance Tracking</span>
+                            <span class="feature">✓ Impact Reports</span>
+                        </div>
+                        <button class="card-btn" onclick="openPlatform('https://njtcdata.github.io/Progress-Monitoring/')">
+                            Open Progress Monitoring
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </button>
+                        <button class="info-btn" onclick="openGuide('progress')">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+                                <line x1="12" y1="17" x2="12.01" y2="17"/>
+                            </svg>
+                        </button>
+                    </div>
+                    
+                    <!-- PEARL -->
+                    <div class="platform-card card-pearl" data-platform="pearl">
+                        <div class="card-glow"></div>
+                        <div class="card-header">
+                            <div class="card-icon">🎓</div>
+                            <h3>PEARL</h3>
+                            <div class="card-badge">Operations</div>
+                        </div>
+                        <p class="card-description">Log attendance, submit surveys, track hours. Your operational hub for all program management tasks.</p>
+                        <div class="card-features">
+                            <span class="feature">✓ Attendance Logging</span>
+                            <span class="feature">✓ Survey Submission</span>
+                            <span class="feature">✓ Hour Tracking</span>
+                        </div>
+                        <button class="card-btn" onclick="openPlatform('https://login.tutorwithpearl.com')">
+                            Open PEARL
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </button>
+                        <button class="info-btn" onclick="openGuide('pearl')">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+                                <line x1="12" y1="17" x2="12.01" y2="17"/>
+                            </svg>
+                        </button>
+                    </div>
+                    
+                    <!-- i-READY -->
+                    <div class="platform-card card-iready" data-platform="iready">
+                        <div class="card-glow"></div>
+                        <div class="card-header">
+                            <div class="card-icon">📚</div>
+                            <h3>i-Ready</h3>
+                            <div class="card-badge">Academics</div>
+                        </div>
+                        <p class="card-description">Access student diagnostic data, instructional materials, and personalized learning paths. Data drives instruction.</p>
+                        <div class="card-features">
+                            <span class="feature">✓ Diagnostic Data</span>
+                            <span class="feature">✓ Learning Paths</span>
+                            <span class="feature">✓ Color Bands</span>
+                        </div>
+                        <button class="card-btn" onclick="openPlatform('https://login.i-ready.com')">
+                            Open i-Ready
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </button>
+                        <button class="info-btn" onclick="openGuide('iready')">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+                                <line x1="12" y1="17" x2="12.01" y2="17"/>
+                            </svg>
+                        </button>
+                    </div>
+                    
+                </div>
+            </section>
+            
+            <!-- ROLE-SPECIFIC CONTENT -->
+            <section class="role-content" id="roleContent">
+                <!-- Dynamically populated based on role -->
+            </section>
+            
+            <!-- SUPPORT HIERARCHY -->
+            <section class="support-section">
+                <h2 class="section-title">📞 Need Help? Know Who to Contact</h2>
+                <div class="support-grid">
+                    <div class="support-card support-primary">
+                        <div class="support-badge">1st</div>
+                        <h3>Onsite Leader</h3>
+                        <p>Your first point of contact for immediate questions, daily operations, and real-time support.</p>
+                        <ul>
+                            <li>Session questions</li>
+                            <li>Student behavior</li>
+                            <li>Materials & resources</li>
+                            <li>Schedule changes</li>
+                        </ul>
+                    </div>
+                    <div class="support-card support-secondary">
+                        <div class="support-badge">2nd</div>
+                        <h3>Program Manager</h3>
+                        <p>For escalated issues, technical problems, policy questions, and professional development.</p>
+                        <ul>
+                            <li>Technical issues</li>
+                            <li>Policy clarification</li>
+                            <li>Professional development</li>
+                            <li>Complex situations</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            
+        </div>
+    </main>
+    
+    <!-- GUIDE MODAL -->
+    <div class="guide-modal" id="guideModal" style="display:none;">
+        <div class="guide-modal-content">
+            <div class="guide-modal-header">
+                <h2 id="guideTitle">Platform Guide</h2>
+                <button class="modal-close" onclick="closeGuide()">×</button>
+            </div>
+            <div class="guide-modal-body" id="guideBody">
+                <!-- Dynamically populated -->
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+    
+</body>
+</html>
