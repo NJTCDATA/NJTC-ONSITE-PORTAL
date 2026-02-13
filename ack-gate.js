@@ -170,17 +170,16 @@ function showAcknowledgementModal(uid, dayKey) {
                     <input type="hidden" id="ack-decision" required />
                 </div>
                 <div class="form-section">
-                    <label for="ack-site" class="form-label required">Site or Location</label>
-                    <select id="ack-site" class="njtc-input" required>
-                        <option value="">Select your site...</option>
-                        <option value="Clifton Middle School">Clifton Middle School</option>
-                        <option value="Newark High School">Newark High School</option>
-                        <option value="Paterson Elementary School">Paterson Elementary School</option>
-                        <option value="Trenton Academy">Trenton Academy</option>
-                        <option value="Camden Learning Center">Camden Learning Center</option>
-                        <option value="Other">Other (specify below)</option>
-                    </select>
-                    <input type="text" id="ack-site-other" class="njtc-input" placeholder="Please specify your site" style="display:none; margin-top: 0.75rem;"/>
+                    <label for="ack-site" class="form-label required">School / Site Name</label>
+                    <input 
+                        type="text" 
+                        id="ack-site" 
+                        class="njtc-input" 
+                        placeholder="e.g., Lincoln Elementary School"
+                        required 
+                        autocomplete="off"
+                    />
+                    <p class="field-helper-text">Enter the full name of your school or site location</p>
                 </div>
                 <div class="form-section">
                     <label for="ack-signature" class="form-label required">Your Signature (Full Name)</label>
@@ -201,8 +200,7 @@ function showAcknowledgementModal(uid, dayKey) {
 function setupAcknowledgementForm(uid, dayKey, modal) {
     const decisionButtons = modal.querySelectorAll('.decision-btn');
     const decisionInput = modal.querySelector('#ack-decision');
-    const siteSelect = modal.querySelector('#ack-site');
-    const siteOther = modal.querySelector('#ack-site-other');
+    const siteInput = modal.querySelector('#ack-site');
     const signatureInput = modal.querySelector('#ack-signature');
     const submitBtn = modal.querySelector('#ack-submit-btn');
     const changeUIDBtn = modal.querySelector('#ack-change-uid-btn');
@@ -216,27 +214,17 @@ function setupAcknowledgementForm(uid, dayKey, modal) {
             validateForm();
         });
     });
-    siteSelect.addEventListener('change', () => {
-        if (siteSelect.value === 'Other') {
-            siteOther.style.display = 'block';
-            siteOther.required = true;
-        } else {
-            siteOther.style.display = 'none';
-            siteOther.required = false;
-            siteOther.value = '';
-        }
-        validateForm();
-    });
+    siteInput.addEventListener('input', validateForm);
     signatureInput.addEventListener('input', validateForm);
     function validateForm() {
         const hasDecision = !!selectedDecision;
-        const hasSite = siteSelect.value && (siteSelect.value !== 'Other' || siteOther.value.trim().length >= 2);
+        const hasSite = siteInput.value.trim().length >= 3;
         const hasSignature = signatureInput.value.trim().length >= 3;
         submitBtn.disabled = !(hasDecision && hasSite && hasSignature);
     }
     submitBtn.addEventListener('click', () => {
         const decision = selectedDecision;
-        const site = siteSelect.value === 'Other' ? siteOther.value.trim() : siteSelect.value;
+        const site = siteInput.value.trim();
         const signature = signatureInput.value.trim();
         const signatureWithUID = `${signature} | UID:${uid}`;
         if (DEBUG) {
