@@ -4,7 +4,7 @@
    ============================================================================ */
 
 const DEBUG = false;
-const FORM_ACTION_URL = "PASTE_GOOGLE_FORM_formResponse_URL_HERE"; // YOU MUST UPDATE THIS
+const FORM_ACTION_URL = "https://docs.google.com/forms/d/e/1FAIpQLSchJy1w0NtOztPnzbgdpmt7zMmO_Z9RFBu-WGEPbz7Drej_lg/formResponse";
 
 // Google Form entry IDs
 const ENTRY_DECISION = "entry.994385786";
@@ -128,7 +128,7 @@ function showAcknowledgementModal(uid, dayKey) {
     modal.innerHTML = `
         <div class="njtc-modal-content njtc-modal-large">
             
-            <!-- THIS IS WHERE YOUR RESPONSIBILITIES HTML GOES -->
+            <!-- RESPONSIBILITIES SECTION -->
             <div class="njtc-responsibilities-container">
                 <!-- Mission Statement -->
                 <div class="responsibilities-header">
@@ -249,7 +249,6 @@ function showAcknowledgementModal(uid, dayKey) {
                     </p>
                 </div>
             </div>
-            <!-- END RESPONSIBILITIES HTML -->
             
             <!-- Acknowledgement Form -->
             <div class="njtc-ack-form">
