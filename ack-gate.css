@@ -449,3 +449,11 @@
         grid-template-columns: 1fr;
     }
 }
+
+.field-helper-text {
+    font-size: 0.8125rem;
+    color: #6c757d;
+    margin-top: 0.375rem;
+    margin-bottom: 0;
+    font-style: italic;
+}
