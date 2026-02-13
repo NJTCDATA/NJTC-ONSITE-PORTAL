@@ -1259,3 +1259,247 @@ body {
 .guide-modal-body::-webkit-scrollbar-thumb:hover {
     background: var(--gold-dark);
 }
+
+/* ============================================================================
+   NJTC DAILY RESPONSIBILITIES - MODAL CONTENT STYLES
+   Clean, professional, accessible design for daily acknowledgement
+   ============================================================================ */
+
+.njtc-responsibilities-container {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: #2c3e50;
+  line-height: 1.7;
+  max-width: 100%;
+}
+
+/* Header & Mission Statement */
+.responsibilities-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid #003366;
+}
+
+.responsibilities-header h2 {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #003366;
+  margin: 0 0 1rem 0;
+  letter-spacing: -0.01em;
+}
+
+.mission-statement {
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  color: #4a5568;
+  max-width: 680px;
+  margin: 0 auto;
+  font-weight: 400;
+}
+
+/* Collapsible Details */
+.responsibilities-details {
+  background: #f8f9fa;
+  border: 1px solid #d1d9e0;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+}
+
+.responsibilities-details[open] .toggle-icon {
+  transform: rotate(90deg);
+}
+
+.responsibilities-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1.25rem 1.5rem;
+  background: linear-gradient(135deg, #003366 0%, #004d99 100%);
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 1.125rem;
+  font-weight: 600;
+  user-select: none;
+  list-style: none;
+  transition: background 0.2s ease;
+}
+
+.responsibilities-toggle::-webkit-details-marker {
+  display: none;
+}
+
+.responsibilities-toggle:hover {
+  background: linear-gradient(135deg, #004d99 0%, #0066cc 100%);
+}
+
+.toggle-icon {
+  font-size: 0.875rem;
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+
+.toggle-text {
+  flex: 1;
+}
+
+/* Responsibilities Content */
+.responsibilities-content {
+  padding: 1.5rem;
+  background: #ffffff;
+}
+
+/* Individual Responsibility Section */
+.responsibility-section {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #e4e9ed;
+}
+
+.responsibility-section:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.responsibility-section h3 {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #003366;
+  margin: 0 0 1rem 0;
+}
+
+.section-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: linear-gradient(135deg, #003366, #004d99);
+  color: #ffffff;
+  border-radius: 50%;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.responsibility-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.responsibility-section li {
+  position: relative;
+  padding-left: 1.75rem;
+  margin-bottom: 0.875rem;
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  color: #2c3e50;
+}
+
+.responsibility-section li:last-child {
+  margin-bottom: 0;
+}
+
+.responsibility-section li::before {
+  content: "•";
+  position: absolute;
+  left: 0.5rem;
+  color: #003366;
+  font-size: 1.25rem;
+  line-height: 1.4;
+  font-weight: 700;
+}
+
+/* Acknowledgement Statement */
+.acknowledgement-statement {
+  background: linear-gradient(135deg, rgba(0, 51, 102, 0.05), rgba(0, 77, 153, 0.03));
+  border: 2px solid #003366;
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.acknowledgement-statement p {
+  margin: 0 0 0.75rem 0;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #2c3e50;
+}
+
+.acknowledgement-statement p:last-child {
+  margin-bottom: 0;
+}
+
+.acknowledgement-statement strong {
+  color: #003366;
+  font-weight: 700;
+}
+
+.acknowledgement-note {
+  font-size: 0.875rem;
+  color: #4a5568;
+  font-style: italic;
+}
+
+/* Mobile Responsive */
+@media (max-width: 640px) {
+  .responsibilities-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .mission-statement {
+    font-size: 0.9375rem;
+  }
+
+  .responsibilities-toggle {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+
+  .responsibilities-content {
+    padding: 1rem;
+  }
+
+  .responsibility-section h3 {
+    font-size: 1.125rem;
+  }
+
+  .responsibility-section li {
+    font-size: 0.875rem;
+    padding-left: 1.5rem;
+  }
+
+  .acknowledgement-statement {
+    padding: 1.25rem;
+  }
+
+  .acknowledgement-statement p {
+    font-size: 0.9375rem;
+  }
+}
+
+/* Accessibility - Focus States */
+.responsibilities-toggle:focus {
+  outline: 3px solid #FFB81C;
+  outline-offset: 2px;
+}
+
+/* Print Styles */
+@media print {
+  .responsibilities-details {
+    border: 1px solid #000;
+  }
+
+  .responsibilities-details[open] summary {
+    display: none;
+  }
+
+  .responsibilities-content {
+    display: block !important;
+  }
+}
